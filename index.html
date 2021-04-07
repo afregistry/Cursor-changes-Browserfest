@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!Credits: Milan Chheda, Azad, Leonid Batkhan, William Craig, Chris Coyier, cursor.cc>
+
+<html lang="en-US">
+
+  <style>
+    #myBtn {
+      position: absolute;
+    }
+
+    body {
+      cursor: "default";
+      width: "window.screen.width";
+      height: "window.screen.height";
+	  background-color: #474747;
+    }
+
+  </style>
+
+  
+
+  <script>
+    let rx, ry, rc;
+
+    function myFunction() {
+      
+      rx = Math.floor(Math.random() * window.screen.width);
+      ry = Math.floor(Math.random() * window.screen.height);
+      
+      if(rx >= (window.screen.width-80)){
+        rx-=80;
+      }
+      if(ry >= (window.screen.height-30)){
+        rx-=30;
+      }
+      
+      document.getElementById("myBtn").style.left = rx + "px";
+      document.getElementById("myBtn").style.top = ry + "px";
+
+      rc = Math.floor(Math.random() * 12 + 1);
+
+      switch (rc) {
+        case 1:
+          document.getElementById("myBtn").style.cursor = "wait";
+          document.body.style.cursor = "waiting"; 
+          break;
+        case 2:
+          document.getElementById("myBtn").style.cursor = "not-allowed";
+          document.body.style.cursor = "not-allowed";
+          break;
+        case 3:
+          document.getElementById("myBtn").style.cursor = "cell";
+          document.body.style.cursor = "cell"; 
+          break;
+        case 4:
+          document.getElementById("myBtn").style.cursor = "crosshair";
+          document.body.style.cursor = "crosshair"; 
+          break;
+        case 5:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/1.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/1.cur'), auto"; 
+          break;
+       case 6:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/2.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/2.cur'), auto"; 
+          break;
+        case 7:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/3.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/3.cur'), auto";
+          break;
+        case 8:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/4.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/4.cur'), auto"; 
+          break;
+        case 9:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/5.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/5.cur'), auto";
+          break;
+        case 10:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/7.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/7.cur'), auto"; 
+          break;
+       case 11:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/8.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/8.cur'), auto"; 
+          break;
+        case 12:
+          document.getElementById("myBtn").style.cursor = "url('specialty cursors/9.cur'), auto";
+          document.body.style.cursor = "url('specialty cursors/9.cur'), auto";
+          break;
+        default:
+          document.body.style.cursor = "auto";
+      }
+    }
+
+  </script>
+	
+  
+  <body>
+    <button type="button" style="height:30;width:80" id="myBtn" onclick="myFunction()">CLICK ME</button>
+  </body>
+  
+  
+</html>
