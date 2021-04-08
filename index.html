@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!Credits: Milan Chheda, Azad, Leonid Batkhan, William Craig, Chris Coyier, T.J. Crowder, cursor.cc>
-
+<!Thanks shawné>
   <html lang="en-US">
 
     <style>
@@ -11,8 +11,8 @@
       html,
       body {
         height: 100%;
-        width:100%;
-        cursor: pointer;
+        width: 100%;
+        cursor: auto;
       }
 
     </style>
@@ -32,11 +32,11 @@
         rx = Math.floor(Math.random() * window.screen.width);
         ry = Math.floor(Math.random() * window.screen.height);
 
-        if (rx >= (window.screen.width - 80)) {
-          rx -= 80;
+        if (document.getElementById("myBtn").style.right > window.screen.width) {
+          rx -= 300;
         }
-        if (ry >= (window.screen.height - 30)) {
-          rx -= 30;
+        if (document.getElementById("myBtn").style.bottom > window.screen.height) {
+            rx -= 200;
         }
 
         document.getElementById("myBtn").style.left = rx + "px";
